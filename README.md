@@ -1,76 +1,71 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
+# Tushar Chaudhary | Data Analyst Portfolio
 
-<br/>
+Welcome to my personal portfolio website built with React.js.  
+It highlights my skills, projects, and experience in data analysis and programming.
 
-<center>
+---
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
+## 🚀 TL;DR
 
-</center>
+- ⚙️ Built using React.js and Bootstrap
+- 🎯 Includes sections like About, Skills, Resume, and Contact
+- 🌐 Hosted on GitHub Pages
+- 📸 Responsive and mobile-friendly design
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
-</h3>
+---
 
-## TL;DR
+## 📂 Folder Structure
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+src/
+├── components/ # All React components (Home, About, Resume, etc.)
+├── Assets/ # Images, icons, resume, avatar
+├── App.js # Main application structure
+└── index.js # Entry point
 
-## Built With
+---
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+## 🛠️ Built With
 
-This project was built using these technologies.
+- [React.js](https://reactjs.org/)
+- [React Bootstrap](https://react-bootstrap.github.io/)
+- [React Router](https://reactrouter.com/)
+- [React Icons](https://react-icons.github.io/)
+- [GitHub Pages](https://pages.github.com/)
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+---
 
-## Features
+## 📄 Live Demo
 
-**📖 Multi-Page Layout**
+Check out the live version here:  
+🔗 [https://tushar-analytics.github.io/portfolio](https://tushar-analytics.github.io/portfolio)
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+---
 
-**📱 Fully Responsive**
+## 🧠 Skills Featured
 
-## Getting Started
+- Python, SQL, Excel, Power BI  
+- Git & GitHub  
+- Basic Web Development (HTML/CSS/JS)
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+---
 
-## 🛠 Installation and Setup Instructions
+## 📬 Contact
 
-1. Installation: `npm install`
+Feel free to connect with me:
 
-2. In the project directory, you can run: `npm start`
+- 📧 Email: your.email@example.com  
+- 💼 [LinkedIn](https://www.linkedin.com/in/tusharchaudhary017)  
+- 🧑‍💻 [LeetCode](https://leetcode.com/chaudharytushar017)  
+- 🌐 [Portfolio](https://tushar-analytics.github.io/portfolio)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+---
 
-## Usage Instructions
+## 📌 Deployment Instructions
 
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+To run this locally:
 
-### Show your support
-
-Give a ⭐ if you like this website!
-
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+```bash
+git clone https://github.com/tushar-analytics/portfolio.git
+cd portfolio
+npm install
+npm start
