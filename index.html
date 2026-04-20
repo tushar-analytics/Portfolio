@@ -5,208 +5,672 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tushar Chaudhary | Data Scientist & ML Engineer</title>
+    <meta name="description"
+        content="Tushar Chaudhary — Data Scientist & ML Engineer transforming data into actionable insights and building intelligent systems.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">TC.</div>
+    <!-- Animated background canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Floating Nav Pill -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="logo">TC<span class="logo-dot">.</span></div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="https://drive.google.com/file/d/1pAWkXxygsRqQh9dxvj-vCumjPiQ1D_G4/view?usp=sharing"
+                        target="_blank" class="nav-link resume-btn">Resume <i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#home" class="mob-link">Home</a></li>
+            <li><a href="#skills" class="mob-link">Skills</a></li>
+            <li><a href="#projects" class="mob-link">Projects</a></li>
+            <li><a href="#education" class="mob-link">Education</a></li>
+            <li><a href="https://drive.google.com/file/d/1pAWkXxygsRqQh9dxvj-vCumjPiQ1D_G4/view?usp=sharing"
+                    target="_blank" class="mob-link">Resume</a></li>
+            <li><a href="#contact" class="mob-link">Contact</a></li>
+        </ul>
+    </div>
 
     <main>
-        <section id="home" class="hero">
-            <div class="container hero-content">
-                <p class="greeting">Hi, I'm</p>
-                <h1 class="name">Tushar Chaudhary</h1>
-                <h2 class="title">Data Scientist & ML Engineer</h2>
-                <p class="bio">Transforming data into actionable insights and building intelligent systems. Passionate
-                    about Machine Learning, Data Analysis, and solving complex problems.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View Projects</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
+        <!-- ═══════════════ HERO ═══════════════ -->
+        <section id="home" class="hero-section">
+            <div class="hero-grid">
+                <!-- Left: Main intro -->
+                <div class="hero-main glass-card" id="hero-main">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Available for opportunities
+                    </div>
+                    <p class="hero-greeting">Hi, I'm</p>
+                    <h1 class="hero-name">Tushar<br>Chaudhary</h1>
+                    <h2 class="hero-title">Data Analyst <span class="amp">&amp;</span> ML Engineer</h2>
+                    <p class="hero-bio">Transforming data into actionable insights and building intelligent systems.
+                        Passionate about Machine Learning, Data Analysis, and solving complex problems.</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="cta-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="cta-secondary">Contact Me</a>
+                    </div>
+                </div>
+
+                <!-- Right top: Avatar / identity card -->
+                <div class="hero-identity glass-card" id="hero-identity">
+                    <div class="avatar-ring">
+                        <div class="avatar-inner">
+                            <span class="avatar-initials">TC</span>
+                        </div>
+                        <svg class="avatar-orbit" viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="90" fill="none" stroke="url(#orbitGrad)" stroke-width="1.5"
+                                stroke-dasharray="6 4" />
+                            <defs>
+                                <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7c3aed" />
+                                    <stop offset="100%" stop-color="#06b6d4" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="orbit-icon orbit-1"><i class="fas fa-brain"></i></div>
+                        <div class="orbit-icon orbit-2"><i class="fas fa-chart-line"></i></div>
+                        <div class="orbit-icon orbit-3"><i class="fas fa-code"></i></div>
+                    </div>
+                    <p class="identity-role">Data Scientist</p>
+                </div>
+
+                <!-- Stat cards -->
+                <div class="stat-card glass-card" id="stat-1">
+                    <span class="stat-number">6+</span>
+                    <span class="stat-label">Projects Built</span>
+                    <i class="fas fa-rocket stat-icon"></i>
+                </div>
+                <div class="stat-card glass-card" id="stat-2">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Internships</span>
+                    <i class="fas fa-bullseye stat-icon"></i>
+                </div>
+                <div class="stat-card glass-card" id="stat-3">
+                    <span class="stat-number">90%</span>
+                    <span class="stat-label">Model Accuracy</span>
+                    <i class="fas fa-trophy stat-icon"></i>
+                </div>
+
+                <!-- Quick links card -->
+                <div class="quick-links glass-card" id="quick-links">
+                    <p class="quick-title">Find me on</p>
+                    <div class="quick-social">
+                        <a href="https://www.linkedin.com/in/tusharchaudhary017/" target="_blank" aria-label="LinkedIn"
+                            class="social-pill">
+                            <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/tushar-analytics" target="_blank" aria-label="GitHub"
+                            class="social-pill">
+                            <i class="fab fa-github"></i><span>GitHub</span>
+                        </a>
+                        <a href="https://leetcode.com/u/chaudharytushar017/" target="_blank" aria-label="LeetCode"
+                            class="social-pill">
+                            <i class="fas fa-code"></i><span>LeetCode</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ═══════════════ SKILLS ═══════════════ -->
         <section id="skills" class="section">
             <div class="container">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Programming & Analytics</h3>
-                        <div class="tags">
-                            <span>Python</span>
-                            <span>CPP</span>
-                            <span>C</span>
-                            <span>SQL</span>
-                            <span>Excel</span>
+                <div class="section-header">
+
+                    <h2 class="section-title">Technical Skills</h2>
+                </div>
+
+                <div class="skills-tabs">
+                    <button class="tab-btn active" data-tab="programming">
+                        <i class="fas fa-code"></i> Programming
+                    </button>
+                    <button class="tab-btn" data-tab="libraries">
+                        <i class="fas fa-layer-group"></i> Libraries
+                    </button>
+                    <button class="tab-btn" data-tab="tools">
+                        <i class="fas fa-database"></i> Tools
+                    </button>
+                </div>
+
+                <div class="skills-panel active" id="tab-programming">
+                    <div class="skill-orbs">
+                        <div class="skill-orb" style="--delay:0s"><span>Python</span></div>
+                        <div class="skill-orb large" style="--delay:0.1s"><span>Python</span></div>
+                        <div class="skill-orb" style="--delay:0.2s"><span>C++</span></div>
+                        <div class="skill-orb" style="--delay:0.3s"><span>C</span></div>
+                        <div class="skill-orb large" style="--delay:0.4s"><span>SQL</span></div>
+                        <div class="skill-orb" style="--delay:0.5s"><span>Excel</span></div>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Python</span><span class="skill-pct">90%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>SQL</span><span class="skill-pct">80%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>C / C++</span><span class="skill-pct">70%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Excel</span><span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:80%"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-layer-group"></i> Libraries</h3>
-                        <div class="tags">
-                            <span>Pandas</span>
-                            <span>Numpy</span>
-                            <span>Matplotlib</span>
-                            <span>Seaborn</span>
-                            <span>Scikit-Learn</span>
+                </div>
+
+                <div class="skills-panel" id="tab-libraries">
+                    <div class="skill-orbs">
+                        <div class="skill-orb large" style="--delay:0s"><span>Pandas</span></div>
+                        <div class="skill-orb" style="--delay:0.1s"><span>NumPy</span></div>
+                        <div class="skill-orb large" style="--delay:0.2s"><span>Scikit-Learn</span></div>
+                        <div class="skill-orb" style="--delay:0.3s"><span>Matplotlib</span></div>
+                        <div class="skill-orb" style="--delay:0.4s"><span>Seaborn</span></div>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Pandas</span><span class="skill-pct">88%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Scikit-Learn</span><span class="skill-pct">82%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>NumPy</span><span class="skill-pct">85%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Matplotlib / Seaborn</span><span
+                                    class="skill-pct">78%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:78%"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-database"></i> Databases & Tools</h3>
-                        <div class="tags">
-                            <span>MySQL</span>
-                            <span>Jupyter</span>
-                            <span>Google Colab</span>
-                            <span>Git</span>
-                            <span>GitHub</span>
-                            <span>VS Code</span>
-                            <span>PowerBI</span>
-                            <span>Tableau</span>
+                </div>
+
+                <div class="skills-panel" id="tab-tools">
+                    <div class="skill-orbs">
+                        <div class="skill-orb" style="--delay:0s"><span>MySQL</span></div>
+                        <div class="skill-orb large" style="--delay:0.1s"><span>Jupyter</span></div>
+                        <div class="skill-orb" style="--delay:0.2s"><span>Colab</span></div>
+                        <div class="skill-orb large" style="--delay:0.3s"><span>PowerBI</span></div>
+                        <div class="skill-orb" style="--delay:0.5s"><span>Git</span></div>
+                        <div class="skill-orb" style="--delay:0.7s"><span>Selenium</span></div>
+                        <div class="skill-orb" style="--delay:0.7s"><span>AWS</span></div>
+                        <div class="skill-orb" style="--delay:0.7s"><span>Docker</span></div>
+
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>PowerBI</span><span class="skill-pct">80%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>MySQL</span><span class="skill-pct">78%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:78%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Git / GitHub</span><span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Selenium</span><span class="skill-pct">40%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>AWS</span><span class="skill-pct">50%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Docker</span><span class="skill-pct">25%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--w:25%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ═══════════════ PROJECTS ═══════════════ -->
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Customer Churn Prediction</h3>
-                            <span class="date">Oct 2025 - Nov 2025</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>Scikit-learn</span>
-                            <span>Seaborn</span>
-                        </div>
-                        <ul class="project-details">
-                            <li>Cleaned and explored a Telco dataset with 5,000+ entries to identify customer churn
-                                behavior.</li>
-                            <li>Built logistic regression model achieving 82% accuracy.</li>
-                            <li>Provided business insights to reduce churn through retention strategy simulations.</li>
-                        </ul>
-                    </div>
 
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Movie Recommender System</h3>
-                            <span class="date">Jan 2025 - Feb 2025</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Streamlit</span>
-                            <span>Seaborn</span>
-                            <span>Scikit-learn</span>
-                        </div>
-                        <ul class="project-details">
-                            <li>Developed a machine-learning-based movie recommender system using content-based
-                                filtering.</li>
-                            <li>Implemented vectorization techniques (TF-IDF/CountVectorizer) to compute similarity
-                                across thousands of movie features.</li>
-                            <li>Engineered and cleaned dataset by processing metadata (genres, cast, crew, keywords).
-                            </li>
-                        </ul>
-                    </div>
+                <!-- Section Header -->
+                <div class="section-header">
 
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>IPL Win Predictor</h3>
-                            <span class="date">Oct 2024 - Nov 2024</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>Scikit-learn</span>
-                            <span>Seaborn</span>
-                        </div>
-                        <ul class="project-details">
-                            <li>Built an IPL match win prediction model using Logistic Regression.</li>
-                            <li>Leveraged historical match data, team performance metrics, and venue statistics.</li>
-                            <li>Achieved 97% accuracy and delivered a streamlined prediction pipeline for real-time
-                                insights.</li>
-                        </ul>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+
+                <!-- ── Creative Category Switcher ── -->
+                <div class="cat-switcher-wrap">
+                    <div class="cat-switcher" id="cat-switcher">
+                        <div class="cat-glider" id="cat-glider"></div>
+                        <button class="cat-btn active" data-cat="dashboards" id="cat-btn-dashboards">
+                            <span class="cat-icon"><i class="fas fa-chart-pie"></i></span>
+                            <span class="cat-label">Dashboards</span>
+                            <span class="cat-count">2</span>
+                        </button>
+                        <button class="cat-btn" data-cat="ml" id="cat-btn-ml">
+                            <span class="cat-icon"><i class="fas fa-robot"></i></span>
+                            <span class="cat-label">ML Projects</span>
+                            <span class="cat-count">4</span>
+                        </button>
+                    </div>
+                    <!-- Decorative neon divider bar -->
+                    <div class="cat-divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-orb" id="divider-orb"></div>
+                        <div class="divider-line"></div>
                     </div>
                 </div>
+
+                <!-- ═══ CATEGORY PANELS ═══ -->
+
+                <!-- DASHBOARDS PANEL -->
+                <div class="cat-panel active" id="panel-dashboards">
+                    <div class="panel-meta">
+                        <span class="panel-tag"><i class="fas fa-chart-pie"></i> Power BI &amp; SQL</span>
+                        <div class="carousel-nav">
+                            <button class="carousel-btn" id="dash-prev" aria-label="Previous"><i
+                                    class="fas fa-arrow-left"></i></button>
+                            <button class="carousel-btn" id="dash-next" aria-label="Next"><i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="drag-hint" id="dash-drag-hint"><i class="fas fa-hand-pointer"></i><span>Drag to
+                            explore</span></div>
+                    <div class="carousel-wrapper" id="dash-wrapper">
+                        <div class="projects-carousel" id="dash-carousel">
+
+                            <!-- Dashboard 1 -->
+                            <div class="project-card">
+                                <div class="project-glow dash-glow"></div>
+                                <div class="project-num">01</div>
+                                <div class="project-inner">
+                                    <div class="project-top">
+                                        <div class="project-icon-wrap dash-icon"><i class="fas fa-funnel-dollar"></i>
+                                        </div>
+                                        <div class="project-details-right">
+                                            <span class="project-date">Power BI · SQL</span>
+                                            <a href="https://github.com/tushar-analytics/Sales-Performance-Dashboard"
+                                                class="project-github" target="_blank" aria-label="GitHub Repository">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h3 class="project-title">Sales Performance &amp; Operations Dashboard</h3>
+                                    <p class="project-desc">Developed an end-to-end Power BI dashboard to monitor sales
+                                        funnels, conversion rates, agent performance, and revenue trends, enabling
+                                        data-driven decision-making for leadership. Crafted SQL queries to extract,
+                                        clean, and organize raw operational data, while establishing standardized KPI
+                                        definitions to ensure consistent reporting across teams.</p>
+                                    <div class="project-tags">
+                                        <span>Power BI</span>
+                                        <span>SQL</span>
+                                        <span>DAX</span>
+                                        <span>KPI Design</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dashboard 2 -->
+                            <div class="project-card">
+                                <div class="project-glow dash-glow"></div>
+                                <div class="project-num">02</div>
+                                <div class="project-inner">
+                                    <div class="project-top">
+                                        <div class="project-icon-wrap dash-icon"><i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="project-details-right">
+                                            <span class="project-date">Power BI · DAX</span>
+                                            <a href="https://github.com/tushar-analytics/Education-Industry-Dashboard"
+                                                class="project-github" target="_blank" aria-label="GitHub Repository">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h3 class="project-title">Education Industry Dashboard</h3>
+                                    <p class="project-desc">Developed a Power BI dashboard to analyze student enrollment
+                                        trends, academic performance, and revenue metrics. Implemented DAX calculations
+                                        and interactive visualizations to monitor key educational KPIs. Created measures
+                                        such as Total Students, Total Revenue, and Average Marks to enable effective
+                                        performance tracking.</p>
+                                    <div class="project-tags">
+                                        <span>Power BI</span>
+                                        <span>DAX</span>
+                                        <span>Data Modeling</span>
+                                        <span>KPI</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- /dash-carousel -->
+                    </div><!-- /carousel-wrapper -->
+                    <div class="carousel-dots" id="dash-dots">
+                        <button class="dot active" data-index="0" aria-label="Dashboard 1"></button>
+                        <button class="dot" data-index="1" aria-label="Dashboard 2"></button>
+                    </div>
+                </div><!-- /panel-dashboards -->
+
+                <!-- ML PROJECTS PANEL -->
+                <div class="cat-panel" id="panel-ml">
+                    <div class="panel-meta">
+                        <span class="panel-tag"><i class="fas fa-robot"></i> Python &amp; ML</span>
+                        <div class="carousel-nav">
+                            <button class="carousel-btn" id="ml-prev" aria-label="Previous"><i
+                                    class="fas fa-arrow-left"></i></button>
+                            <button class="carousel-btn" id="ml-next" aria-label="Next"><i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="drag-hint" id="ml-drag-hint"><i class="fas fa-hand-pointer"></i><span>Drag to
+                            explore</span></div>
+                    <div class="carousel-wrapper" id="ml-wrapper">
+                        <div class="projects-carousel" id="ml-carousel">
+
+                            <!-- ML 1 -->
+                            <div class="project-card">
+                                <div class="project-glow"></div>
+                                <div class="project-num">01</div>
+                                <div class="project-inner">
+                                    <div class="project-top">
+                                        <div class="project-icon-wrap"><i class="fas fa-users"></i></div>
+                                        <div class="project-details-right">
+                                            <span class="project-date">Oct 2025 — Nov 2025</span>
+                                            <a href="https://github.com/tushar-analytics/Customer-Churn-Prediction"
+                                                class="project-github" target="_blank" aria-label="GitHub Repository">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h3 class="project-title">Customer Churn Prediction</h3>
+                                    <p class="project-desc">Cleaned and explored a Telco dataset with 5,000+ entries to
+                                        identify customer churn behavior. Built XGBoost regression model achieving 82%
+                                        accuracy. Provided business insights to reduce churn through retention strategy
+                                        simulations.</p>
+                                    <div class="project-tags">
+                                        <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Seaborn</span>
+                                    </div>
+                                    <div class="project-metric">
+                                        <span class="metric-val">98%</span>
+                                        <span class="metric-lbl">Model Accuracy</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ML 2 -->
+                            <div class="project-card">
+                                <div class="project-glow"></div>
+                                <div class="project-num">02</div>
+                                <div class="project-inner">
+                                    <div class="project-top">
+                                        <div class="project-icon-wrap"><i class="fas fa-film"></i></div>
+                                        <div class="project-details-right">
+                                            <span class="project-date">Jan 2025 — Feb 2025</span>
+                                            <a href="https://github.com/tushar-analytics/Movie-recommender-system"
+                                                class="project-github" target="_blank" aria-label="GitHub Repository">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h3 class="project-title">Movie Recommender System</h3>
+                                    <p class="project-desc">ML-based content filtering using TF-IDF/CountVectorizer
+                                        across thousands of movie features. Engineered metadata including genres, cast,
+                                        crew and keywords.</p>
+                                    <div class="project-tags">
+                                        <span>Python</span><span>Streamlit</span><span>Scikit-learn</span><span>Seaborn</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ML 3 -->
+                            <div class="project-card">
+                                <div class="project-glow"></div>
+                                <div class="project-num">03</div>
+                                <div class="project-inner">
+                                    <div class="project-top">
+                                        <div class="project-icon-wrap"><i class="fas fa-face-smile"></i></div>
+                                        <div class="project-details-right">
+                                            <span class="project-date">Computer Vision</span>
+                                            <a href="https://github.com/tushar-analytics/Facial-Recognition"
+                                                class="project-github" target="_blank" aria-label="GitHub Repository">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h3 class="project-title">Facial Recognition System</h3>
+                                    <p class="project-desc">Developed a facial recognition system using computer vision
+                                        techniques to detect and identify individuals from images/video streams.
+                                        Implemented face detection and feature extraction using OpenCV and trained
+                                        models for accurate recognition.</p>
+                                    <div class="project-tags">
+                                        <span>Python</span><span>OpenCV</span><span>Deep Learning</span><span>CV</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ML 4 -->
+                            <div class="project-card">
+                                <div class="project-glow"></div>
+                                <div class="project-num">04</div>
+                                <div class="project-inner">
+                                    <div class="project-top">
+                                        <div class="project-icon-wrap"><i class="fas fa-chart-bar"></i></div>
+                                        <div class="project-details-right">
+                                            <span class="project-date">Oct 2024 — Nov 2024</span>
+                                            <a href="https://github.com/tushar-analytics/IPL-Result-Predictor"
+                                                class="project-github" target="_blank" aria-label="GitHub Repository">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h3 class="project-title">IPL Win Predictor</h3>
+                                    <p class="project-desc">IPL match win prediction using Logistic Regression on
+                                        historical data, team performance metrics, and venue statistics. 97% accuracy
+                                        with real-time prediction pipeline.</p>
+                                    <div class="project-tags">
+                                        <span>Python</span><span>Pandas</span><span>Scikit-learn</span>
+                                    </div>
+                                    <div class="project-metric">
+                                        <span class="metric-val">97%</span>
+                                        <span class="metric-lbl">Accuracy</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- /ml-carousel -->
+                    </div><!-- /carousel-wrapper -->
+                    <div class="carousel-dots" id="ml-dots">
+                        <button class="dot active" data-index="0" aria-label="ML 1"></button>
+                        <button class="dot" data-index="1" aria-label="ML 2"></button>
+                        <button class="dot" data-index="2" aria-label="ML 3"></button>
+                        <button class="dot" data-index="3" aria-label="ML 4"></button>
+                    </div>
+                </div><!-- /panel-ml -->
+
             </div>
         </section>
+
+        <!-- ═══════════════ EDUCATION ═══════════════ -->
 
         <section id="education" class="section">
             <div class="container">
-                <h2 class="section-title">Education & Achievements</h2>
-                <div class="education-grid">
-                    <div class="edu-card">
-                        <h3>JSS Academy of Technical Education</h3>
-                        <p class="degree">Bachelor of Technology</p>
-                        <p class="year">2022 - 2026</p>
-                        <p class="score">7.1 CGPA</p>
+                <div class="section-header">
+
+                    <h2 class="section-title">Education &amp; Achievements</h2>
+                </div>
+
+                <!-- Timeline -->
+                <div class="timeline">
+                    <div class="timeline-node reveal">
+                        <div class="timeline-marker">
+                            <div class="marker-inner"><i class="fas fa-graduation-cap"></i></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <span class="timeline-year">2022 — 2026</span>
+                            <h3>JSS Academy of Technical Education</h3>
+                            <p class="tl-degree">Bachelor of Technology</p>
+                            <div class="tl-score">
+                                <span class="score-label">CGPA</span>
+                                <span class="score-val">7.1</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="edu-card">
-                        <h3>Modern Era Public School</h3>
-                        <p class="degree">12th Class</p>
-                        <p class="year">2020 - 2021</p>
-                        <p class="score">96.4%</p>
+
+                    <div class="timeline-node reveal">
+                        <div class="timeline-marker">
+                            <div class="marker-inner"><i class="fas fa-school"></i></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <span class="timeline-year">2020 — 2021</span>
+                            <h3>Modern Era Public School</h3>
+                            <p class="tl-degree">12th Class</p>
+                            <div class="tl-score">
+                                <span class="score-label">Score</span>
+                                <span class="score-val">96.4%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="achievements-list">
-                    <h3>Key Achievements</h3>
-                    <ul>
-                        <li><i class="fas fa-certificate"></i> Completed Google Data Analytics Professional Certificate
-                            with 90%+ score.</li>
-                        <li><i class="fas fa-trophy"></i> Ranked in top 15% on Kaggle's Python micro-courses
-                            leaderboard.</li>
-                        <li><i class="fas fa-award"></i> Awarded "Best Project Presentation" for Sales Dashboard
-                            Analysis in fifth semester review.</li>
-                    </ul>
+                <!-- Achievements -->
+                <div class="achievements-grid">
+                    <div class="achieve-card glass-card reveal">
+                        <div class="achieve-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="achieve-text">
+                            <h4>Power BI Certificate</h4>
+                            <p>Completed Professional Certificate with CampusX</p>
+                        </div>
+                    </div>
+                    <div class="achieve-card glass-card reveal">
+                        <div class="achieve-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="achieve-text">
+                            <h4>Cleared TCS NQT</h4>
+                            <p>Cleared TCS NQT with in hand offer</p>
+                        </div>
+                    </div>
+                    <div class="achieve-card glass-card reveal">
+                        <div class="achieve-icon"><i class="fas fa-award"></i></div>
+                        <div class="achieve-text">
+                            <h4>Best Project Presentation</h4>
+                            <p>Awarded for Sales Dashboard Analysis in fifth semester review</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ═══════════════ CONTACT ═══════════════ -->
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="contact-text">I'm currently looking for new opportunities. Whether you have a question or just
-                    want to say hi, I'll try my best to get back to you!</p>
-                <div class="contact-links">
-                    <a href="mailto:chaudharytushar017@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>chaudharytushar017@gmail.com</span>
-                    </a>
-                    <a href="tel:8193039673" class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>8193039673</span>
-                    </a>
+                <div class="section-header">
+
+                    <h2 class="section-title">Get In Touch</h2>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/tusharchaudhary017/" target="_blank" aria-label="LinkedIn"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/tushar-analytics" target="_blank" aria-label="GitHub"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://leetcode.com/u/chaudharytushar017/" target="_blank" aria-label="LeetCode"><i
-                            class="fas fa-code"></i></a>
+
+                <div class="contact-wrap">
+                    <div class="contact-card glass-card reveal">
+                        <div class="contact-glow"></div>
+                        <p class="contact-intro">I'm currently looking for new opportunities. Whether you have a
+                            question or just want to say hi, I'll try my best to get back to you!</p>
+
+                        <div class="contact-methods">
+                            <a href="mailto:chaudharytushar017@gmail.com" class="contact-method" id="email-link">
+                                <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="method-details">
+                                    <span class="method-type">Email</span>
+                                    <span class="method-value">chaudharytushar017@gmail.com</span>
+                                </div>
+                                <i class="fas fa-arrow-right method-arrow"></i>
+                            </a>
+                            <a href="tel:8193039673" class="contact-method" id="phone-link">
+                                <div class="method-icon"><i class="fas fa-phone"></i></div>
+                                <div class="method-details">
+                                    <span class="method-type">Phone</span>
+                                    <span class="method-value">8193039673</span>
+                                </div>
+                                <i class="fas fa-arrow-right method-arrow"></i>
+                            </a>
+                        </div>
+
+                        <div class="contact-divider"></div>
+
+                        <div class="contact-socials">
+                            <a href="https://www.linkedin.com/in/tusharchaudhary017/" target="_blank"
+                                aria-label="LinkedIn" class="csocial-btn" id="contact-linkedin">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/tushar-analytics" target="_blank" aria-label="GitHub"
+                                class="csocial-btn" id="contact-github">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://leetcode.com/u/chaudharytushar017/" target="_blank" aria-label="LeetCode"
+                                class="csocial-btn" id="contact-leetcode">
+                                <i class="fas fa-code"></i>
+                                <span>LeetCode</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -214,7 +678,16 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Tushar Chaudhary. All rights reserved.</p>
+            <div class="footer-inner">
+                <span class="footer-logo">TC.</span>
+                <p>&copy; 2025 Tushar Chaudhary. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/tusharchaudhary017/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/tushar-analytics" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
