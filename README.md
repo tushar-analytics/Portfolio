@@ -1,9 +1,6 @@
-# Data Scientist Portfolio
+# Data Analyst and ML Engineer Portfolio
 
-A professional portfolio website for Tushar Chaudhary, Data Scientist and ML Engineer.
-
-## Live Demo
-[Link to your live demo if available]
+A professional portfolio created by me for me.
 
 ## Features
 - **Responsive Design**: Works seamlessly on desktop and mobile devices.
@@ -21,7 +18,7 @@ A professional portfolio website for Tushar Chaudhary, Data Scientist and ML Eng
 ## Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/tushar-analytics/portfolio.git
+   git clone https://github.com/tushar-analytics/Portfolio
    ```
 2. Open `index.html` in your browser.
 
